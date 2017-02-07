@@ -11,7 +11,7 @@ include_directories(SYSTEM ${OpenCL_INCLUDE_DIRS})
 
 link_directories(${OpenCL_LIBRARIES}) 
 
-add_executable(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/cl_error_util.c)
+add_executable(${PROJECT_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp ${CMAKE_CURRENT_SOURCE_DIR}/cl_error_util.c ${CMAKE_CURRENT_SOURCE_DIR}/cl_util.c)
 target_link_libraries(${PROJECT_NAME} ${OpenCL_LIBRARIES})
 
 # If no build type specified, configure for Release
