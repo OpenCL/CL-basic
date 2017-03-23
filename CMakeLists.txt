@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 2.8)
 
 project(CL-basic)
 
-list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+if (CMAKE_VERSION VERSION_LESS "3.1.0")
+    list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+endif()
 
 # find OpenCL
 find_package(OpenCL REQUIRED)
