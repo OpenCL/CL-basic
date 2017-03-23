@@ -337,7 +337,7 @@ cl_program CreateAndBuildProgram(cl_context context, char* sourceCode, size_t so
     program = clCreateProgramWithSource(context, 1, (const char**)(&sourceCode), &sourceCodeLength, &clError);
     CHECK_OCL_ERR("clCreateProgramWithSource", clError);
 
-    clGetContextInfo(context, CL_CONTEXT_DEVICES, sizeof(cl_device_id), &device, NULL);
+    clError = clGetContextInfo(context, CL_CONTEXT_DEVICES, sizeof(cl_device_id), &device, NULL);
     CHECK_OCL_ERR("clGetContextInfo", clError);
 
     clError = clBuildProgram(program, 1, &device, NULL, NULL, NULL);
