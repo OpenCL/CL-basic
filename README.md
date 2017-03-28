@@ -6,14 +6,14 @@ A prototype for a basic OpenCL host and kernel code
 
 + To compile
 ```sh
-$ cd cmake
-$ cmake ..
+$ cd build
+$ cmake ../.
 $ make
 ```
 
 #### To test:
 + To run program
 ```sh
-$ cd cmake
+$ cd build
 $ ./CL-basic
 ```
